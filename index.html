@@ -13,22 +13,7 @@ var WindowEvent; (function (WindowEvent) { WindowEvent["Load"] = "load"; WindowE
            console.log('error');  
          }
        }
-         window.RProfiler ? _rumMarkComplete() : window.addEventListener("GlimpseLoaded", _rumMarkComplete);
-      </script>
-/* <script type="text/javascript">
-       fetch('https://www.websee.com/companies/getcompanieslist')
-                        .then((response) => {
-                            console.log(response.json());
-                            return false;
-                        }
-                        )
-                        .catch(() => {
-                            console.log('error occured');
-                            return false;
-                        }
-                            
-                    );
-     </script> */
+         window.RProfiler ? _rumMarkComplete() : window.addEventListener("GlimpseLoaded", _rumMarkComplete)
 	   
  <script>
 	   const myRequest = new Request('https://www.websee.com/companies/getcompanieslist', {
