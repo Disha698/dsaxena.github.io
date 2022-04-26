@@ -15,7 +15,7 @@ var WindowEvent; (function (WindowEvent) { WindowEvent["Load"] = "load"; WindowE
        }
          window.RProfiler ? _rumMarkComplete() : window.addEventListener("GlimpseLoaded", _rumMarkComplete);
       </script>
-      <script type="text/javascript">
+/* <script type="text/javascript">
        fetch('https://www.websee.com/companies/getcompanieslist')
                         .then((response) => {
                             console.log(response.json());
@@ -28,7 +28,49 @@ var WindowEvent; (function (WindowEvent) { WindowEvent["Load"] = "load"; WindowE
                         }
                             
                     );
-      </script>
+     </script> */
+	   
+ <script>
+	   const myRequest = new Request('https://www.websee.com/companies/getcompanieslist', {
+  method: 'GET',
+  mode: 'cors',
+  cache: 'default',
+});
+fetch(myRequest)
+.then( data => data.json())
+.then (data => console.log(data));		    
+		    
+//XHR
+function makeAjaxCalls(url){
+    let xhr = new XMLHttpRequest();
+         xhr.open('GET', url, true);
+         xhr.onload = function() {
+            if (xhr.status != 200) { // analyze HTTP status of the response
+               
+            } else { // show the result
+               
+            }
+        };
+
+        xhr.onprogress = function(event) {
+        if (event.lengthComputable) {
+            
+        } else {
+         
+        }
+
+        };
+
+        xhr.onerror = function() {
+      
+        };
+
+        xhr.send();
+}
+	   
+	 </script>   
+	   
+	   
       <title>RUM Testing page</title>
    </head>
    <body>
