@@ -18,6 +18,7 @@
          }
       }
       window.RProfiler ? _rumMarkComplete() : window.addEventListener("GlimpseLoaded", _rumMarkComplete)
+      window.addEventListener('unload', _rumMarkComplete());
 	   
  </script>
 	   
