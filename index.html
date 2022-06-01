@@ -10,6 +10,9 @@ var generateUniqueID=function(){return"v2-"+Date.now()+"-"+(Math.floor(Math.rand
             RProfiler && console.log("inside block");
             RProfiler.addInfo('indicator', 'number', 100);
             RProfiler.addInfo('tracepoint', 'vt', 'no-cache');
+	    RProfiler.addInfo('tracepoint', 'aa', 'keep-alive');
+            RProfiler.addInfo('tracepoint', 'cc', 'no-cache');
+            RProfiler.addInfo('tracepoint', 'bb', 'text/plain');
 	    RProfiler.addInfo('pageGroup', 'p1');
 	    RProfiler.addInfo('variation', 'v1');
          }
